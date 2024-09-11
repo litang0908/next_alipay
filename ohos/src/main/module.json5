@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "next_alipay",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ]
+  }
+}
