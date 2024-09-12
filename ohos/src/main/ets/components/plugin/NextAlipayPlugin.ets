@@ -34,9 +34,7 @@ export default class NextAlipayPlugin implements FlutterPlugin, MethodCallHandle
   }
 
   onMethodCall(call: MethodCall, result: MethodResult): void {
-    if (call.method == "getPlatformVersion") {
-      result.success("OpenHarmony ^ ^ ")
-    } else if (call.method == "startPayByAlipay") {
+    if (call.method == "startPayByAlipay") {
       // orderInfo 由服务端生成
       // 第二个参数 控制是否展示支付宝loading
       let orderInfo: string = call.argument("orderInfo");
