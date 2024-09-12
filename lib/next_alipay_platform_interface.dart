@@ -23,7 +23,7 @@ abstract class NextAlipayPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> startPayByAlipay(String orderInfo, bool withLoading) async {
-    throw UnimplementedError('startPayByAlipay() has not been implemented.');
+  Future<String?> startPay(String orderInfo, bool withLoading) async {
+    throw UnimplementedError('startPay() has not been implemented.');
   }
 }

@@ -10,12 +10,11 @@ class MethodChannelNextAlipay extends NextAlipayPlatform {
   final methodChannel = const MethodChannel('next_alipay');
 
   @override
-  Future<String?> startPayByAlipay(String orderInfo, bool withLoading) async {
+  Future<String?> startPay(String orderInfo, bool withLoading) async {
     var arguments = {
       "orderInfo": orderInfo,
       "withLoading": withLoading,
     };
-    return await methodChannel.invokeMethod<String>(
-        'startPayByAlipay', arguments);
+    return await methodChannel.invokeMethod<String>('startPay', arguments);
   }
 }
