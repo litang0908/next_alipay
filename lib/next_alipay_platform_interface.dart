@@ -26,4 +26,8 @@ abstract class NextAlipayPlatform extends PlatformInterface {
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
+
+  Future<String?> startPayByAlipay(String orderInfo, bool withLoading) async {
+    throw UnimplementedError('startPayByAlipay() has not been implemented.');
+  }
 }
