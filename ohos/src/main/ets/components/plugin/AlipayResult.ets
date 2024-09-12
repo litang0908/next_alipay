@@ -1,5 +1,5 @@
 export interface AlipayResult {
   resultStatus: string;
-  memo: string;
-  result: Record<string, string | undefined>;
+  memo: string | null;
+  result: Record<string, string | undefined> | string | null;
 }
