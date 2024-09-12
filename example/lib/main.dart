@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:next_alipay/next_alipay.dart';
 
@@ -31,8 +31,8 @@ class _MyAppState extends State<MyApp> {
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
-      platformVersion =
-          await _nextAlipayPlugin.getPlatformVersion() ?? 'Unknown platform version';
+      platformVersion = await _nextAlipayPlugin.getPlatformVersion() ??
+          'Unknown platform version';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
@@ -54,10 +54,22 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+        body: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text('Running on: $_platformVersion\n'),
+            ElevatedButton(
+              onPressed: startPayByAlipay,
+              child: const Text("startPayByAlipay"),
+            ),
+          ],
         ),
       ),
     );
+  }
+
+  Future<void> startPayByAlipay() async {
+    await _nextAlipayPlugin.startPayByAlipay("orderInfo", true);
   }
 }
