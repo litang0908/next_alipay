@@ -1,6 +1,6 @@
 name: next_alipay
 description: Alipay flutter plugin for Harmony NEXT.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/litang0908/next_alipay.git
 
 environment:
