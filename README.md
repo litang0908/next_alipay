@@ -22,7 +22,7 @@
     dependencies:
       next_alipay:
          git:
-            url: https://gitee.com/ohos-next/next_alipay.git
+            url: https://github.com/litang0908/next_alipay.git
    ```
 3. 调用下面方法发起原生支付请求
 
