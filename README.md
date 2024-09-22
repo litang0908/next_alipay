@@ -7,7 +7,7 @@
 - [支付宝开发文档](https://opendocs.alipay.com/open/204/105051?pathHash=b91b9616&ref=api)
 - [支付宝 NEXT 版 SDK 地址](https://ohpm.openharmony.cn/#/cn/detail/@cashier_alipay%2Fcashiersdk)
 
-##注意
+## 注意
 
 - 目前仅实现了 `new Pay().pay(orderInfo, withLoading)` 方法的桥接，其他方法暂未实现。
 - 此插件仅仅是实现了在 NEXT 原生端调用支付宝完成支付，所需的 orderInfo 需要从 Flutter 层传递过来。
