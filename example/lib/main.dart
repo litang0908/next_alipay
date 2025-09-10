@@ -39,6 +39,6 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> startPayByAlipay() async {
-    await _nextAlipayPlugin.startPayByAlipay("orderInfo", true);
+    await _nextAlipayPlugin.startPay("orderInfo", true);
   }
 }
